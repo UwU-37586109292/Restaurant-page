@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "mock restaurant page using webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UwU-37586109292/Restaurant-page.git"
+  },
+  "author": "Zuzanna Nowacka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UwU-37586109292/Restaurant-page/issues"
+  },
+  "homepage": "https://github.com/UwU-37586109292/Restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

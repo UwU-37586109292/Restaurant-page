@@ -1,7 +1,15 @@
 import './style.css'
-import prepareHomeContents from './home.js'
+import showHomePage from './home.js'
+import showNavBar from './navigation.js'
+import showFooter from './footer.js'
 
+const contents = document.createElement('div')
+contents.id = 'content'
+contents.classList.add('flex', 'column')
+document.body.appendChild(contents)
 
-prepareHomeContents().forEach(element => {
-    document.getElementById('content').appendChild(element)
-})
+showNavBar()
+
+showHomePage()
+
+showFooter()

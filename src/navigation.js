@@ -1,5 +1,6 @@
 import showHomePage from './home.js'
 import showMenu from './menu.js'
+import showContactUs from './contact.js'
 
 export default function showNavBar() {
     const mainContent = document.getElementById('content')
@@ -16,8 +17,13 @@ export default function showNavBar() {
     menu.textContent = 'Menu'
     menu.onclick = showMenu
 
+    const contactUs = document.createElement('li')
+    contactUs.textContent = 'Contact us'
+    contactUs.onclick = showContactUs
+
     navList.appendChild(aboutUs)
     navList.appendChild(menu)
+    navList.appendChild(contactUs)
     header.append(navList)
     header.classList.add('header')
 

@@ -1,8 +1,22 @@
+/* fonts */
+@font-face {
+    font-family: 'meows';
+    src: url('../fonts/Meows/Meows.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 #content {
@@ -42,10 +56,17 @@ header {
     background-color: aliceblue;
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    font-size: x-large;
+}
+
+#cafeName {
+    font-family: 'meows', Arial, Helvetica, sans-serif;
+    font-size: xxx-large;
 }
 
 header img {
-    max-width: 50px;
+    max-width: 70px;
 }
 
 /* footer */

@@ -17,6 +17,7 @@ export default function showNavBar() {
 
     const nameWrapper = document.createElement('div')
     nameWrapper.classList.add('flex', 'center')
+    nameWrapper.id = 'cafeName'
     nameWrapper.appendChild(cafeLogo)
     nameWrapper.appendChild(cafeName)
 

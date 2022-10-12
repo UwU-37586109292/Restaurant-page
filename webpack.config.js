@@ -28,7 +28,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'My awesome restaurant',
+            title: 'Cat Café',
         }),
     ],
 };

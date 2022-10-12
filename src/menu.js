@@ -1,14 +1,12 @@
-import insertToMainSection from './utils.js'
+import { insertToMainSection, prepareMainElement } from './utils.js'
 
 export default function showMenu() {
     insertToMainSection(prepareMenuPageContent())
 }
 
 function prepareMenuPageContent() {
-    const main = document.createElement('main')
+    const main = prepareMainElement()
     main.textContent = 'Menu'
-    main.classList.add('main')
-    main.id = 'main'
 
     return main
 }

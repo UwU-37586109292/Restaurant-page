@@ -27,7 +27,10 @@ li {
     margin: 5px;
 }
 
-.main {}
+.main {
+    background-color: aqua;
+    height: 100vh;
+}
 
 header {
     background-color: aliceblue;

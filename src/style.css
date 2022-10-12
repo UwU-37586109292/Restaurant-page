@@ -37,11 +37,23 @@ li {
     height: 100vh;
 }
 
+/* header */
 header {
     background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
 }
 
+header img {
+    max-width: 50px;
+}
+
+/* footer */
 footer {
     margin-top: auto;
     background-color: mintcream;
+}
+
+footer>* {
+    margin: 10px;
 }

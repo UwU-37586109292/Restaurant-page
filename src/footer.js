@@ -1,6 +1,8 @@
 import Icon from '../PNG/icon.png';
 
 export default function showFooter() {
+    //    <a href="https://www.flaticon.com/free-icons/cafe" title="cafe icons">Cafe icons created by noomtah - Flaticon</a>
+
     const footer = document.createElement('footer')
     footer.textContent = 'Created by Zuzka'
     footer.classList.add('footer', 'flex', 'center')

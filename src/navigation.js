@@ -9,7 +9,7 @@ export default function showNavBar() {
     const mainContent = document.getElementById('content')
 
     const cafeName = document.createElement('div')
-    cafeName.textContent = 'Cat Cafe'
+    cafeName.textContent = 'Catteine'
 
     const cafeLogo = new Image();
     cafeLogo.src = Icon

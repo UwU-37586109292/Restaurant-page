@@ -21,6 +21,8 @@ body {
 
 #content {
     height: 100vh;
+    background: url(../PNG/background2.jpg) no-repeat center fixed;
+    background-size: cover;
 }
 
 .flex {
@@ -47,8 +49,15 @@ li {
 }
 
 .main {
-    background-color: aqua;
     height: 100vh;
+}
+
+/* hero */
+.hero {
+    font-size: xx-large;
+    max-width: 500px;
+    margin-top: 5%;
+    margin-left: 5%;
 }
 
 /* header */

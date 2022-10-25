@@ -32,7 +32,7 @@ function prepareMenuPageContent() {
     menuContainer.appendChild(cakesHeader)
 
     menuContainer.appendChild(prepareMenuItem('Cupcake', 'We prepare batch of cupackes every day. Flavours vary depending on fresh ingredients at hand', 3.50, menuImagesSrc + 'cupcake.jpg'))
-    menuContainer.appendChild(prepareMenuItem('Tiramisu', 'Made according to nana\'s recipe.', 7.50, menuImagesSrc + 'tiramisu.jpg'))
+    menuContainer.appendChild(prepareMenuItem('Tiramisu', 'Made according to Nana\'s recipe.', 7.50, menuImagesSrc + 'tiramisu.jpg'))
 
     main.appendChild(menuContainer)
 

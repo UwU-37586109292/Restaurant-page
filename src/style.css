@@ -23,7 +23,6 @@ body {
 
 #content {
     height: 100vh;
-
 }
 
 .flex {
@@ -58,8 +57,11 @@ li {
 }
 
 .container {
-    max-width: 50%;
+    width: clamp(300px, 80%, 950px);
     height: fit-content;
+    border: 3px solid tomato;
+    border-radius: 20px;
+    background-color: rgb(148, 142, 127, 0.6)
 }
 
 .blur {
@@ -73,6 +75,8 @@ li {
 
 .section-header-small {
     font-size: x-large;
+    border-bottom: 2px solid grey;
+    margin: 20px;
 }
 
 .start {
@@ -82,17 +86,18 @@ li {
 .menu-item {
     /* justify-content: space-between; */
     width: 100%;
+    padding: 10px 20px;
 }
-
-.crop {}
 
 .menu-image {
     float: left;
     width: 250px;
     height: 250px;
     overflow: hidden;
-    object-fit: contain;
-    padding: 10px;
+    object-fit: cover;
+    margin: 0 10px;
+    border-radius: 10px;
+
 }
 
 /* hero */

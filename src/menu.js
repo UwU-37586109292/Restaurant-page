@@ -5,6 +5,7 @@ export default function showMenu() {
 }
 
 function prepareMenuPageContent() {
+    const menuImagesSrc = '../PNG/menu_items/'
     const main = prepareMainElement()
     main.classList.add('flex', 'justify-center')
 
@@ -21,26 +22,37 @@ function prepareMenuPageContent() {
     beveragesHeader.textContent = 'Beverages'
     menuContainer.appendChild(beveragesHeader)
 
-    menuContainer.appendChild(prepareMenuItem('Drip', 'Brewed with Hario V60 brewer has strong flavor and aroma. Great way to kick off your day!', 4))
-    menuContainer.appendChild(prepareMenuItem('Aeropress', 'Coffee brewed using air pressure. Fine grained beans give the coffee special taste', 3))
-    menuContainer.appendChild(prepareMenuItem('Chemex', 'Brewed using similar technique as drip, but due to larger filter area the coffee has more delicate flavour. Especially enjoyable in the afternoons', 5))
+    menuContainer.appendChild(prepareMenuItem('Drip', 'Brewed with Hario V60 brewer has strong flavor and aroma. Great way to kick off your day!', 4, menuImagesSrc + 'drip.jpg'))
+    menuContainer.appendChild(prepareMenuItem('Aeropress', 'Coffee brewed using air pressure. Fine grained beans give the coffee special taste', 3, menuImagesSrc + 'aeropress.jpg'))
+    menuContainer.appendChild(prepareMenuItem('Chemex', 'Brewed using similar technique as drip, but due to larger filter area the coffee has more delicate flavour. Especially enjoyable in the afternoons', 5, menuImagesSrc + 'chemex.jpg'))
 
     const cakesHeader = document.createElement('div')
     cakesHeader.classList.add('section-header-small')
     cakesHeader.textContent = 'Cakes'
     menuContainer.appendChild(cakesHeader)
 
-    menuContainer.appendChild(prepareMenuItem('Cupcake', 'We prepare batch of cupackes every day. Flavours vary depending on fresh ingredients at hand', 3.50))
-    menuContainer.appendChild(prepareMenuItem('Tiramisu', 'Made according to nana\'s recipe.', 7.50))
+    menuContainer.appendChild(prepareMenuItem('Cupcake', 'We prepare batch of cupackes every day. Flavours vary depending on fresh ingredients at hand', 3.50, menuImagesSrc + 'cupcake.jpg'))
+    menuContainer.appendChild(prepareMenuItem('Tiramisu', 'Made according to nana\'s recipe.', 7.50, menuImagesSrc + 'tiramisu.jpg'))
 
     main.appendChild(menuContainer)
 
     return main
 }
 
-function prepareMenuItem(name, description, price) {
+function prepareMenuItem(name, description, price, imageSrc) {
     const menuItemWrapper = document.createElement('div')
-    menuItemWrapper.classList.add('flex', 'column', 'menu-item')
+    menuItemWrapper.classList.add('flex', 'menu-item')
+
+    const image = new Image();
+    image.src = imageSrc
+    image.classList.add('menu-image')
+    const cropper = document.createElement('div')
+    cropper.classList.add('crop')
+    cropper.appendChild(image)
+    menuItemWrapper.appendChild(cropper)
+
+    const menuItemText = document.createElement('div')
+    menuItemText.classList.add('flex', 'column', 'start')
 
     const nameDiv = document.createElement('div')
     nameDiv.classList.add('name')
@@ -54,9 +66,11 @@ function prepareMenuItem(name, description, price) {
     priceDiv.classList.add('price')
     priceDiv.textContent = '$' + price
 
-    menuItemWrapper.appendChild(nameDiv)
-    menuItemWrapper.appendChild(descriptionDiv)
-    menuItemWrapper.appendChild(priceDiv)
+    menuItemText.appendChild(nameDiv)
+    menuItemText.appendChild(descriptionDiv)
+    menuItemText.appendChild(priceDiv)
+
+    menuItemWrapper.appendChild(menuItemText)
 
     return menuItemWrapper
 }

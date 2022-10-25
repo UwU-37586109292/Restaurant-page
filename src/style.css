@@ -59,7 +59,7 @@ li {
 
 .container {
     max-width: 50%;
-    max-height: 50%;
+    height: fit-content;
 }
 
 .blur {
@@ -73,6 +73,26 @@ li {
 
 .section-header-small {
     font-size: x-large;
+}
+
+.start {
+    align-content: flex-start;
+}
+
+.menu-item {
+    /* justify-content: space-between; */
+    width: 100%;
+}
+
+.crop {}
+
+.menu-image {
+    float: left;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    object-fit: contain;
+    padding: 10px;
 }
 
 /* hero */

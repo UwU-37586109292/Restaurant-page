@@ -27,17 +27,17 @@ function prepareMenuPageContent() {
     beveragesHeader.textContent = 'Beverages'
     menuContainer.appendChild(beveragesHeader)
 
-    menuContainer.appendChild(prepareMenuItem('Drip', 'Brewed with Hario V60 brewer has strong flavor and aroma. Great way to kick off your day', 4, menuImagesSrc + 'drip.jpg'))
-    menuContainer.appendChild(prepareMenuItem('Aeropress', 'Coffee brewed using air pressure. Fine grained beans give the coffee special taste', 3, menuImagesSrc + 'aeropress.jpg'))
-    menuContainer.appendChild(prepareMenuItem('Chemex', 'Brewed using similar technique as drip, but due to larger filter area the coffee has more delicate flavour. Especially enjoyable in the afternoons', 5, menuImagesSrc + 'chemex.jpg'))
+    menuContainer.appendChild(prepareMenuItem('Drip', 'Brewed with Hario V60 brewer has strong flavor and aroma. Great way to kick off your day', 4, DripImage))
+    menuContainer.appendChild(prepareMenuItem('Aeropress', 'Coffee brewed using air pressure. Fine grained beans give the coffee special taste', 3, AeropressImage))
+    menuContainer.appendChild(prepareMenuItem('Chemex', 'Brewed using similar technique as drip, but due to larger filter area the coffee has more delicate flavour. Especially enjoyable in the afternoons', 5, ChemexImage))
 
     const cakesHeader = document.createElement('h2')
     cakesHeader.classList.add('section-header-small')
     cakesHeader.textContent = 'Cakes'
     menuContainer.appendChild(cakesHeader)
 
-    menuContainer.appendChild(prepareMenuItem('Cupcake', 'We prepare batch of cupackes every day. Flavours vary depending on fresh ingredients at hand', 3.50, menuImagesSrc + 'cupcake.jpg'))
-    menuContainer.appendChild(prepareMenuItem('Tiramisu', 'Made according to Nana\'s recipe', 7.50, menuImagesSrc + 'tiramisu.jpg'))
+    menuContainer.appendChild(prepareMenuItem('Cupcake', 'We prepare batch of cupackes every day. Flavours vary depending on fresh ingredients at hand', 3.50, CupacakeImage))
+    menuContainer.appendChild(prepareMenuItem('Tiramisu', 'Made according to Nana\'s recipe', 7.50, TiramisuImage))
 
     main.appendChild(menuContainer)
 

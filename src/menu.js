@@ -10,7 +10,6 @@ export default function showMenu() {
 }
 
 function prepareMenuPageContent() {
-    const menuImagesSrc = '../PNG/menu_items/'
     const main = prepareMainElement()
     main.classList.add('flex', 'justify-center')
 

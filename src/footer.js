@@ -1,4 +1,5 @@
 import Icon from '../PNG/icon.png';
+import IconRevers from '../PNG/icon_light.png'
 
 export default function showFooter() {
     //    <a href="https://www.flaticon.com/free-icons/cafe" title="cafe icons">Cafe icons created by noomtah - Flaticon</a>
@@ -12,9 +13,31 @@ export default function showFooter() {
 
     const githubIcon = new Image();
     githubIcon.src = Icon;
+    githubIcon.id = 'icon'
     githubIcon.alt = "github-user-link"
+    githubIcon.style.display = 'block'
+
+
+    const githubIconLight = new Image();
+    githubIconLight.src = IconRevers;
+    githubIconLight.id = 'icon-light'
+    githubIconLight.alt = "github-user-link"
+    githubIconLight.style.display = 'none'
 
     githubLink.appendChild(githubIcon)
+    githubLink.appendChild(githubIconLight)
+
+    githubIcon.addEventListener('mouseover', function () {
+        event.target.style.display = 'none'
+        document.getElementsByClassName('footer')[0].style.color = 'white'
+        document.getElementById('icon-light').style.display = 'block'
+    })
+    githubIconLight.addEventListener('mouseleave', function () {
+        event.target.style.display = 'none'
+        document.getElementsByClassName('footer')[0].style.color = 'black'
+        document.getElementById('icon').style.display = 'block'
+    })
+
     footer.appendChild(githubLink)
 
     const mainContent = document.getElementById('content')

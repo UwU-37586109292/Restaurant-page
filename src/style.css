@@ -187,3 +187,9 @@ footer {
 footer>* {
     margin: 10px;
 }
+
+/* 
+a:hover {
+    cursor: pointer;
+    background: url('../PNG/icon_light.png') no-repeat;
+} */

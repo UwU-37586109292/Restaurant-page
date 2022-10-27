@@ -1,4 +1,9 @@
 import { insertToMainSection, prepareMainElement } from './utils.js'
+import DripImage from '../PNG/menu_items/drip.jpg'
+import AeropressImage from '../PNG/menu_items/aeropress.jpg'
+import ChemexImage from '../PNG/menu_items/chemex.jpg'
+import CupacakeImage from '../PNG/menu_items/cupcake.jpg'
+import TiramisuImage from '../PNG/menu_items/tiramisu.jpg'
 
 export default function showMenu() {
     insertToMainSection(prepareMenuPageContent())

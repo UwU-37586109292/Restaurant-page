@@ -7,8 +7,16 @@ export default function showHomePage() {
 function prepareHomePageContent() {
     const main = prepareMainElement()
     const hero = document.createElement('div')
-    hero.classList.add('hero')
-    hero.textContent = 'We love cats, we love caffeine. Add some love and you\'ve got Catteine! Come over, get your favourite brew and pet some fluffy friends'
+    hero.classList.add('hero', 'container')
+
+    const name = document.createElement('h1')
+    name.textContent = 'Catteine'
+    hero.appendChild(name)
+
+    const description = document.createElement('p')
+    description.textContent = 'We are a small cat café, which means that while visiting us you are also visiting couple of our cats as well. Feel free to pet them and please be mindful of their comfort.'
+    hero.appendChild(description)
+
     main.appendChild(hero)
     return main
 }

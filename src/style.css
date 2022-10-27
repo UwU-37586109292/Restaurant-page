@@ -19,6 +19,13 @@ body {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     background: url(../PNG/background2.jpg) no-repeat center fixed;
     background-size: cover;
+
+    --line-under: rgb(10, 126, 194);
+}
+
+h1,
+p {
+    margin: 5px;
 }
 
 #content {
@@ -53,15 +60,14 @@ li {
 }
 
 .main {
-    height: 100vh;
+    height: minmax(100vh, fit-content);
 }
 
 .container {
     width: clamp(300px, 80%, 950px);
     height: fit-content;
-    border: 3px solid tomato;
     border-radius: 20px;
-    background-color: rgb(148, 142, 127, 0.6)
+    background-color: rgba(216, 213, 204, 0.6)
 }
 
 .blur {
@@ -75,7 +81,7 @@ li {
 
 .section-header-small {
     font-size: x-large;
-    border-bottom: 2px solid grey;
+    border-bottom: 3px solid var(--line-under);
     margin: 20px;
 }
 
@@ -86,7 +92,7 @@ li {
 .menu-item {
     /* justify-content: space-between; */
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 0px;
 }
 
 .menu-image {
@@ -97,15 +103,29 @@ li {
     object-fit: cover;
     margin: 0 10px;
     border-radius: 10px;
+}
 
+.menu-item .name {
+    font-size: x-large;
+}
+
+.description {
+    font-size: large;
+    margin-right: 10px;
+}
+
+.price {
+    margin-top: auto;
+    font-size: x-large;
 }
 
 /* hero */
 .hero {
-    font-size: xx-large;
+    font-size: x-large;
     max-width: 500px;
     margin-top: 5%;
     margin-left: 5%;
+    padding: 20px;
 }
 
 /* header */
@@ -133,7 +153,7 @@ header li {
 
 header li:hover {
     cursor: pointer;
-    border-bottom: 1px solid tomato;
+    border-bottom: 1px solid var(--line-under);
 }
 
 /* footer */

@@ -12,27 +12,27 @@ function prepareMenuPageContent() {
     const menuContainer = document.createElement('div')
     menuContainer.classList.add('flex', 'column', 'blur', 'container', 'center')
 
-    const menuHeader = document.createElement('div')
+    const menuHeader = document.createElement('h1')
     menuHeader.classList.add('section-header')
-    menuHeader.textContent = 'Menu'
+    menuHeader.textContent = '🐾 Menu 🐾'
     menuContainer.appendChild(menuHeader)
 
-    const beveragesHeader = document.createElement('div')
+    const beveragesHeader = document.createElement('h2')
     beveragesHeader.classList.add('section-header-small')
     beveragesHeader.textContent = 'Beverages'
     menuContainer.appendChild(beveragesHeader)
 
-    menuContainer.appendChild(prepareMenuItem('Drip', 'Brewed with Hario V60 brewer has strong flavor and aroma. Great way to kick off your day!', 4, menuImagesSrc + 'drip.jpg'))
+    menuContainer.appendChild(prepareMenuItem('Drip', 'Brewed with Hario V60 brewer has strong flavor and aroma. Great way to kick off your day', 4, menuImagesSrc + 'drip.jpg'))
     menuContainer.appendChild(prepareMenuItem('Aeropress', 'Coffee brewed using air pressure. Fine grained beans give the coffee special taste', 3, menuImagesSrc + 'aeropress.jpg'))
     menuContainer.appendChild(prepareMenuItem('Chemex', 'Brewed using similar technique as drip, but due to larger filter area the coffee has more delicate flavour. Especially enjoyable in the afternoons', 5, menuImagesSrc + 'chemex.jpg'))
 
-    const cakesHeader = document.createElement('div')
+    const cakesHeader = document.createElement('h2')
     cakesHeader.classList.add('section-header-small')
     cakesHeader.textContent = 'Cakes'
     menuContainer.appendChild(cakesHeader)
 
     menuContainer.appendChild(prepareMenuItem('Cupcake', 'We prepare batch of cupackes every day. Flavours vary depending on fresh ingredients at hand', 3.50, menuImagesSrc + 'cupcake.jpg'))
-    menuContainer.appendChild(prepareMenuItem('Tiramisu', 'Made according to Nana\'s recipe.', 7.50, menuImagesSrc + 'tiramisu.jpg'))
+    menuContainer.appendChild(prepareMenuItem('Tiramisu', 'Made according to Nana\'s recipe', 7.50, menuImagesSrc + 'tiramisu.jpg'))
 
     main.appendChild(menuContainer)
 
